@@ -21,52 +21,6 @@
                         <i class="bi bi-circle"></i><span>Circulars</span>
                     </a>
                 </li>
-                <li>
-                    <a href="{{ route('web.request.transfers.index') }}">
-                        <i class="bi bi-circle"></i><span>Request Transfers</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="technical-alerts.html">
-                        <i class="bi bi-circle"></i><span>Consents</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="bi bi-circle"></i><span>HR Circulars</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="bi bi-circle"></i><span>Appointment Orders</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="bi bi-circle"></i><span>Transfer Orders</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="bi bi-circle"></i><span>Charge Allowance Orders</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="bi bi-circle"></i><span>Promotion Orders</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="bi bi-circle"></i><span>Seniority</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="bi bi-circle"></i><span>Learn English</span>
-                    </a>
-                </li>
-
             </ul>
         </li>
         <!-- End HR Nav -->
@@ -110,18 +64,11 @@
         </li><!-- End Contact Page Nav -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="pages-register.html">
+            <a class="nav-link collapsed" href="{{ route('employee.retired-employees.register') }}">
                 <i class="bi bi-card-list"></i>
                 <span>Register</span>
             </a>
         </li><!-- End Register Page Nav -->
-
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="pages-login.html">
-                <i class="bi bi-box-arrow-in-right"></i>
-                <span>Login</span>
-            </a>
-        </li><!-- End Login Page Nav -->
 
     </ul>
 

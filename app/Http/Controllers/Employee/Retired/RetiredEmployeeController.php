@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Employee\Retired;
 
 use App\Http\Controllers\Controller;
+use App\Models\Company\Company;
 use App\Models\RetiredEmployee;
 use App\Http\Requests\StoreRetiredEmployeeRequest;
 use App\Http\Requests\UpdateRetiredEmployeeRequest;
+use Illuminate\Http\Request;
 
 class RetiredEmployeeController extends Controller
 {
@@ -15,6 +17,19 @@ class RetiredEmployeeController extends Controller
     public function index()
     {
         //
+    }
+
+    /**
+     * Register page for the retired employees
+     */
+    public function register(Request $request)
+    {
+        if ($request->method() == 'GET') {
+            //
+            $companies = Company::pluck('name', 'id');
+
+            return view('employee.retired-employees.register', compact(['companies']));
+        }
     }
 
     /**
