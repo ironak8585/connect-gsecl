@@ -1,0 +1,1 @@
+<img src="{{ asset('images/logo.png') }}" alt="GSECL Logo" {{ $attributes->merge(['class' => 'img-fluid']) }}>
