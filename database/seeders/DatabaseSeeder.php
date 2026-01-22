@@ -10,6 +10,7 @@ use Database\Seeders\Admin\RoleHasPermissionsSeeder;
 use Database\Seeders\Admin\RoleSeeder;
 use Database\Seeders\Admin\UserSeeder;
 use Database\Seeders\Company\CompanySeeder;
+use Database\Seeders\Location\DispensarySeeder;
 use Database\Seeders\Location\EurjaLocationSeeder;
 use Database\Seeders\Location\LocationDepartmentSeeder;
 use Database\Seeders\Master\CircularCategorySeeder;
@@ -47,6 +48,8 @@ class DatabaseSeeder extends Seeder
         $this->call(SubDepartmentSeeder::class);
         $this->call(DepartmentSeeder::class);
         $this->call(LocationDepartmentSeeder::class);
+
+        $this->call(DispensarySeeder::class);
 
         $this->call(UserSeeder::class);
     }

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Policies;
+namespace App\Policies\Location;
 
-use App\Models\RetiredEmployee;
+use App\Models\Location\Dispensary;
 use App\Models\User;
 use Illuminate\Auth\Access\Response;
 
-class RetiredEmployeePolicy
+class DispensaryPolicy
 {
     /**
      * Determine whether the user can view any models.
@@ -19,7 +19,7 @@ class RetiredEmployeePolicy
     /**
      * Determine whether the user can view the model.
      */
-    public function view(User $user, RetiredEmployee $retiredEmployee): bool
+    public function view(User $user, Dispensary $dispensary): bool
     {
         return false;
     }
@@ -35,7 +35,7 @@ class RetiredEmployeePolicy
     /**
      * Determine whether the user can update the model.
      */
-    public function update(User $user, RetiredEmployee $retiredEmployee): bool
+    public function update(User $user, Dispensary $dispensary): bool
     {
         return false;
     }
@@ -43,7 +43,7 @@ class RetiredEmployeePolicy
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, RetiredEmployee $retiredEmployee): bool
+    public function delete(User $user, Dispensary $dispensary): bool
     {
         return false;
     }
@@ -51,7 +51,7 @@ class RetiredEmployeePolicy
     /**
      * Determine whether the user can restore the model.
      */
-    public function restore(User $user, RetiredEmployee $retiredEmployee): bool
+    public function restore(User $user, Dispensary $dispensary): bool
     {
         return false;
     }
@@ -59,7 +59,7 @@ class RetiredEmployeePolicy
     /**
      * Determine whether the user can permanently delete the model.
      */
-    public function forceDelete(User $user, RetiredEmployee $retiredEmployee): bool
+    public function forceDelete(User $user, Dispensary $dispensary): bool
     {
         return false;
     }

@@ -4,21 +4,15 @@ namespace App\Http\Controllers\Employee\Retired;
 
 use App\Http\Controllers\Controller;
 use App\Models\Company\Company;
-use App\Models\RetiredEmployee;
-use App\Http\Requests\StoreRetiredEmployeeRequest;
-use App\Http\Requests\UpdateRetiredEmployeeRequest;
+use App\Models\Location\Dispensary;
+use App\Models\Location\Location;
+use App\Models\Employee\RetiredEmployee;
+use App\Http\Requests\Employee\StoreRetiredEmployeeRequest;
+use App\Http\Requests\Employee\UpdateRetiredEmployeeRequest;
 use Illuminate\Http\Request;
 
 class RetiredEmployeeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
-
     /**
      * Register page for the retired employees
      */
@@ -27,17 +21,14 @@ class RetiredEmployeeController extends Controller
         if ($request->method() == 'GET') {
             //
             $companies = Company::pluck('name', 'id');
+            $locations = Location::pluck('name', 'id');
+            $dispensaries = Dispensary::pluck('name', 'id');
 
-            return view('employee.retired-employees.register', compact(['companies']));
+            return view('employee.retired-employees.register', compact(['companies', 'locations', 'dispensaries']));
         }
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
+        elseif ($request->method() == 'POST') {
+            # code...
+        }
     }
 
     /**
@@ -52,30 +43,6 @@ class RetiredEmployeeController extends Controller
      * Display the specified resource.
      */
     public function show(RetiredEmployee $retiredEmployee)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(RetiredEmployee $retiredEmployee)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateRetiredEmployeeRequest $request, RetiredEmployee $retiredEmployee)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(RetiredEmployee $retiredEmployee)
     {
         //
     }

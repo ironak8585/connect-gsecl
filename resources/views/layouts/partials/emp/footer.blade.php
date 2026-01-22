@@ -5,7 +5,7 @@
 
             <!-- Logo -->
             <a href="{{ route('home') }}" class="d-flex align-items-center pe-3 me-3 border-end">
-                <img src="{{ asset('images/logo.png') }}" alt="" class="img-fluid" style="max-height: 40px;">
+                <img src="{{ asset('assets/img/logo.png') }}" alt="" class="img-fluid" style="max-height: 40px;">
             </a>
 
             <!-- Text -->

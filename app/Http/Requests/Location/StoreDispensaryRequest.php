@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Location;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreRetiredEmployeeRequest extends FormRequest
+class StoreDispensaryRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
