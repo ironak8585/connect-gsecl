@@ -7,7 +7,7 @@
 <x-web-layout pageTitle="Register as Patient" :breadcrumbs="$links">
 
     <section class="section">
-        <form class="row g-3" action="{{ route('employee.register') }}" method="POST"
+        <form class="row g-3" action="{{ route('employee.retired-employees.register') }}" method="POST"
             enctype="multipart/form-data">
             @csrf
             <!-- <div class="col-md-4">

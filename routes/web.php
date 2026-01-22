@@ -23,7 +23,6 @@ Route::get('/send-test', function () {
 // CREATE route
 Route::match(['GET', 'POST'], 'employee/retired-employees/register', [RetiredEmployeeController::class, 'register'])->name('employee.retired-employees.register');
 
-
 /** for Logged User */
 /** for Employee User */
 Route::get('/dashboard', [DashboardController::class, 'index'])
